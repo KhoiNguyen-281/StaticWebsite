@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 300vh;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(black, white);
+}
+
+header {
+    position: relative;
+    height: fit-content;
+    width: 80%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    height: 100px;
+    width: 200px;
+    background-color: black;
+}
+nav {
+    position: absolute;
+    top:10px;
+    right: 0;
+    width: 80%;
+    /* background-color: black; */
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.tab-item {
+    list-style: none;
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
