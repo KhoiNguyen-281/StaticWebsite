@@ -3,45 +3,118 @@ body {
     padding: 0;
     height: 300vh;
     /* background-color: black; */
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(black, white);
+    
+}
+
+:root {
+    --book-home-title-font: "Merriweather", "Georgia", serif;
+    --book-home-title-size: 12px;
+    --text-color: rgb(54, 38, 24)
 }
 
 header {
-    position: relative;
-    height: fit-content;
-    width: 80%;
+    height: 80px;
+    width: 100%;
     background-color: black;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 4px;
 }
 
+.header-container {
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+}
+
+footer {
+
+}
+
+/* Home page css */
 .logo {
-    position: absolute;
+    background-image: url("./Assets/Booklogo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     left: 0;
-    height: 100px;
-    width: 200px;
-    background-color: black;
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    /* background-color: black; */
 }
 nav {
     position: absolute;
-    top:10px;
+    bottom: 0;
     right: 0;
-    width: 80%;
+    width: 30%;
+    border: 1px solid white;
     /* background-color: black; */
 }
-ul {
+.tab-container {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: flex-end;
+    list-style: none;
 }
 .tab-item {
-    list-style: none;
-    padding: 10px;
+   flex: 1;
 }
 a {
+    display: block;
     text-decoration: none;
     color: white;
+}
+.intro  {
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+#introduction {
+    height: 300px;
+}
+/* Home body */
+.body {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    /* background-color: white; */
+}
+
+
+.home-category {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+    background-color: rgb(243, 242, 233);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    padding: 8px
+}
+
+.book-item {
+    width: 120px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-image {
+    margin: 8px auto;
+    max-width: 80%;
+}
+.book-price {
+    width: 100%;
+    text-align: center;
+    font-family: var(--book-home-title-font);
+    font-size: var(--book-home-title-size);
+    margin: 8px 0;
+}
+.add-item {
+    margin: auto auto 8px;
+    width: fit-content;
+    border-radius: 24px;
 }
