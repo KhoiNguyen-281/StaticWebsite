@@ -8,16 +8,73 @@
 </head>
 <body>
     <header>
-        <div class="logo"></div>
-        <nav>
-            <ul class="tab-container">
-                <li class="tab-item"><a href="index.html">Home</a></li>
-                <li class="tab-item"><a href="./Pages/Category.html">Category</a></li>
-                <li class="tab-item"><a href="">Category</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <div class="logo"><a href="./index.html"></a></div>
+            <nav>
+                <ul class="tab-container">
+                    <li class="tab-item"><a href="./index.html">Home</a></li>
+                    <li class="tab-item"><a href="./Pages/Fiction.html">Fiction</a></li>
+                    <li class="tab-item"><a href="./Pages/Fantasy.html">Fantasy</a></li>
+                    <li class="tab-item"><a href="./Pages/Mystery.html">Mystery</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main class="contact-form-container">
+        <form action="" enctype="multipart/form-data" method="get" target="_blank" >
+            <div class="required">
+                <label for="contact-purpose">You contact us with purpose: </label>
+                <select name="contact-purpose" id="contact-purpose">
+                    <option value="selected" selected>-please select your purpose-</option>
+                    <option value="sell-book">I want to sell books</option>
+                    <option value="buy-book">I want to buy book</option>
+                </select>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Username" maxlength="50">
+                <label for="email">Email address:</label>
+                <input type="email" name="email" id="email" placeholder="Email" maxlength="50">
+                <label for="phone">Phone number:</label>
+                <input type="phone" name="phone" id="phone" placeholder="Phone number">
+                <label for="options">How can we contact you ?</label>
+                <div class="selection">
+                    <input type="checkbox" name="contact-option" id="email"><label for="email">By email</label>
+                    <input type="checkbox" name="contact-option" id="phone"><label for="phone">By phone</label>
+                </div>
+                <label for="options">Do you want to receive news weekly ?</label>
+                <div class="selection">
+                    <input type="radio" name="confirm-receive-news" id="yes" checked><label for="yes">Yes</label>
+                    <input type="radio" name="confirm-receive-news" id="no" checked><label for="no">No</label>
+                </div>
+            </div>
+    
+            <textarea name="note" id="note" cols="1" rows="1" placeholder="*Note"></textarea>
+            
+            <div class="form-button">
+                <input class="button" type="submit" id="submit">
+                <input class="button" type="reset" id="reset">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="nav-container">
+            <div class="logo"><a href="./index.html"></a></div>
+            <nav>
+                <ul class="tab-container">
+                    <li class="tab-item"><a href="./index.html">Home</a></li>
+                    <li class="tab-item">
+                        <a href="">Category</a>
+                        <ul class="footer-category">
+                            <li><a class="footer-navigate" href="./Pages/Fiction.html">Fiction</a></li>
+                            <li><a class="footer-navigate" href="./Pages/Mystery.html">Mystery</a></li>
+                            <li><a class="footer-navigate" href="./Pages/Fantasy.html">Fantasy</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab-item">
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
