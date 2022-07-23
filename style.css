@@ -22,6 +22,7 @@ header {
 
 .nav-container {
     position: relative;
+    padding: 0 16px;
     width: 80%;
 }
 
