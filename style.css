@@ -1,15 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    height: 300vh;
+    height: fit-content
     /* background-color: black; */
     
 }
 
 :root {
-    --book-home-title-font: "Merriweather", "Georgia", serif;
+    --theme-font: "Merriweather", "Georgia", serif;
     --book-home-title-size: 12px;
-    --text-color: rgb(54, 38, 24)
+    --text-color: black;
 }
 
 header {
@@ -21,16 +21,9 @@ header {
     padding-bottom: 4px;
 }
 
-.header-container {
+.nav-container {
     position: relative;
     width: 80%;
-    display: flex;
-    flex-direction: row;
-    border: 1px solid white;
-}
-
-footer {
-
 }
 
 /* Home page css */
@@ -48,17 +41,16 @@ nav {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 30%;
-    border: 1px solid white;
-    /* background-color: black; */
+    width: fit-content;
+    /* border: 1px solid white; */
 }
 .tab-container {
-    width: 100%;
     display: flex;
     list-style: none;
+    gap: 24px;
 }
 .tab-item {
-   flex: 1;
+   padding: 0 12px
 }
 a {
     display: block;
@@ -76,9 +68,9 @@ a {
     height: 300px;
 }
 /* Home body */
-.body {
-    width: 80%;
-    height: 100%;
+main {
+    width: 70%;
+    height: auto;
     margin: auto;
     /* background-color: white; */
 }
@@ -89,6 +81,14 @@ a {
     height: fit-content;
     border-radius: 8px;
     background-color: rgb(243, 242, 233);
+    margin: 24px;
+}
+.category-title > a {
+    font-family: var(--theme-font);
+    color: var(--text-color);
+    padding: 8px
+}
+.item-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 8px;
@@ -100,21 +100,122 @@ a {
     height: fit-content;
     display: flex;
     flex-direction: column;
+
 }
 
 .book-image {
     margin: 8px auto;
-    max-width: 80%;
+    height: 160px;
+}
+
+
+/* Footer css */
+footer {
+    background-color: black;
+    padding: 32px 0 32px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .nav-container > nav {
+    top: -10px;
+}
+.footer-category {
+    padding-inline-start: 0;
+}
+
+.footer-navigate {
+    font-size: 16px;
+}
+
+/* Category page */
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    gap: 12px
+}
+
+.breadcrumbs > a{
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.category-intro {
+    width: 60%;
+    padding: 8px; 
+    border-bottom: 1px solid black;
+}
+.category-intro > p {
+    font-family: var(--theme-font);
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Detailed page */
+
+.book-image-price-container {
+    display: flex;
+    flex-direction: row;
+    height: 310px;
+}
+
+.book-image-price-container .book-image {
+    margin: 5px 8px 0
+}
+
+.sub-img-container {
+    width: 100px;
+    height: inherit;
+}
+
+.sub-img-container .book-image {
+    height: 100px;
+}
+
+.sub-info-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.book-price-and-button {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
 }
 .book-price {
-    width: 100%;
-    text-align: center;
-    font-family: var(--book-home-title-font);
-    font-size: var(--book-home-title-size);
-    margin: 8px 0;
+    width: inherit;
+    text-align: right;
+    font-size: 52px;
+    border-bottom: 1px solid black;
+    padding-bottom: 8px;
 }
 .add-item {
-    margin: auto auto 8px;
-    width: fit-content;
-    border-radius: 24px;
+    border: 1px solid #D6D0C4;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 14px;
+    color: #333333;
+    background-color: #F4F1EA;
+    line-height: 1;
+    padding: 8px 12px;
+    margin-right: 8px;
+    margin-top: 8px;
 }
+
+.book-info-container {
+    margin-top: 32px;
+}
+.book-title {
+    color: var(--text-color);
+    margin: 0 0
+}
+.book-author {
+    margin: 4px 0 4px;
+
+}
+.book-description {
+    font-family: var(--theme-font);
+    font-size: 16px;
+}
+
